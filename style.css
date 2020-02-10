@@ -1,0 +1,18 @@
+	<style>
+		
+		ol > li {
+			float:left;
+			background-color:#FDD700;
+			width:150px;
+			margin-left:1px;
+			height:2em;
+			}
+
+ol > li:hover > a {
+  color:#09C;
+}
+		.car{
+			background-image: url("img/car.png");
+			padding-top
+		}
+	</style>

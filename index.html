@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+background-image: url("img/hamburger.png");
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  height:51px;
+  width:51px;
+}
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+#cars{
+width:950px;
+height:500px;
+left=30%;
+margin:auto;
+}
+.cars{
+height:225px;
+width:225px;
+background-image: url("img/car.png");
+display:inline-block;
+border:2px red solid;
+}
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#1">pole1</a>
+    <a href="#2">pole2</a>
+    <a href="#3">pole3</a>
+	<a href="#4">pole4</a>
+  </div>
+</div>
+
+<div id="cars">
+	<div id="car1" class="cars"></div>
+		<div id="car1" class="cars"></div>
+			<div id="car1" class="cars"></div>
+				<div id="car1" class="cars"></div>
+					<div id="car1" class="cars"></div>
+						<div id="car1" class="cars"></div>
+							<div id="car1" class="cars"></div>
+								<div id="car1" class="cars"></div>
+  </div>
+
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
